@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Motion - Responsive HTML Template</title>
+    <!-- load stylesheets -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400"
+    />
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Bootstrap style -->
+    <link rel="stylesheet" href="css/hero-slider-style.css" />
+    <!-- Hero slider style (https://codyhouse.co/gem/hero-slider/) -->
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <!-- Magnific popup style (http://dimsemenov.com/plugins/magnific-popup/) -->
+    <link rel="stylesheet" href="css/templatemo-style.css" />
+    <!-- Templatemo style -->
+
+    <link rel="stylesheet" href="css/index.css" />
+
+  </head>
+
+  <body>
+    <!-- Content -->
+    <!-- MultiStep Form -->
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <form id="msform">
+          <!-- progressbar -->
+          <ul id="progressbar">
+            <li class="active">Bottle</li>
+            <li>Water</li>
+            <li>Recipe</li>
+            <li>Essence</li>
+            <li>Label</li>
+          </ul>
+          <div id="container">
+            <div class="glass" ondragover='onDragOver(event);' ondrop='onDrop(event);'>
+              <div class="beer"></div>
+            </div>
+            <div class="head"></div>
+            <!-- <div class="pour"></div> -->
+          </div>
+          <p style="color:white">Total Price: €<span id="tott">0</span></p>
+        
+          <!-- fieldsets -->
+          <fieldset id="bottle">
+            <div style="display: inline-block;">
+            <h2 class="fs-title">Choose Bottle</h2>
+            <h3 class="fs-subtitle">Type of Bottle</h3>
+          </div>
+              <input
+                type="button"
+                name="next"
+                class="next action-button"
+                value="Water >"
+              />
+            <br />
+            <div class="grid-item" data-price="0.70">
+              <div class="card text-center">
+                <div class="card-header">Green</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/green.png"
+                      alt="Image"
+                      class="img-fluid tm-img product"
+                      id="product0"
+                      data-price="0.70"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €0.70/ 33cl
+                  <abbr title="This is a GREEN bottle">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="0.40">
+              <div class="card text-center">
+                <div class="card-header">Brown</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/recycling.png"
+                      alt="Image"
+                      class="img-fluid tm-img"
+                      id="product1"
+                      data-price="0.40"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €0.40/ 33cl
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item"  data-price="0.95">
+              <div class="card text-center">
+                <div class="card-header">Blue</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/blue.jpg"
+                      alt="Image"
+                      class="img-fluid tm-img"
+                      id="product2"
+                      data-price="0.95"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €0.95/ 33cl
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset id="water">
+            <input
+              type="button"
+              name="previous"
+              class="previous action-button-previous"
+              value="< Bottle"
+            />
+            <div style="display: inline-block;">
+            <h2 class="fs-title">Choose Water</h2>
+            <h3 class="fs-subtitle">Type of Water</h3>
+          </div>
+            <input
+            type="button"
+            name="next"
+            class="next action-button"
+            value="Recipe >"
+          />
+            <br />
+            <div class="grid-item"  data-price="0">
+              <div class="card text-center">
+                <div class="card-header">Natural</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/natural.png"
+                      alt="Image"
+                      class="img-fluid tm-img product"
+                      id="product3"
+                      data-price="0"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: Free
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item"  data-price="0.69">
+              <div class="card text-center">
+                <div class="card-header">Bezoya</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/bezoya.png"
+                      alt="Image"
+                      class="img-fluid tm-img"
+                      id="product4"
+                      data-price="0.69"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €0.69 /L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="0.58">
+              <div class="card text-center">
+                <div class="card-header">Font Vella</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/font.png"
+                      alt="Image"
+                      class="img-fluid tm-img"
+                      id="product5"
+                      data-price="0.58"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €0.58 /L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="0.35">
+              <div class="card text-center">
+                <div class="card-header">Aquarel</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/aquarel.png"
+                      alt="Image"
+                      class="img-fluid tm-img product"
+                      id="product6"
+                      data-price="0.35"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €0.35 /L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="1">
+              <div class="card text-center">
+                <div class="card-header">Viladrau</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/viladrau.png"
+                      alt="Image"
+                      class="img-fluid tm-img"
+                      id="product7"
+                      data-price="1"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €1/ L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="1">
+              <div class="card text-center">
+                <div class="card-header">Solan</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/solan.png"
+                      alt="Image"
+                      class="img-fluid tm-img"
+                      id="product8"
+                      data-price="1"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €1/ L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <!-- <input
+              type="button"
+              name="previous"
+              class="previous action-button-previous"
+              value="Bottle"
+            />
+            <input
+              type="button"
+              name="next"
+              class="next action-button"
+              value="Recipe"
+            /> -->
+          </fieldset>
+          <fieldset id="recipie">
+            <input
+              type="button"
+              name="previous"
+              class="previous action-button-previous"
+              value="< Water"
+            />
+            <div style="display: inline-block;">
+            <h2 class="fs-title">Choose Recipe</h2>
+            <h3 class="fs-subtitle">Type of Recipe</h3>
+            </div>
+            <input
+              type="button"
+              name="next"
+              class="next action-button"
+              value="Essence >"
+
+            />
+            <br />
+            <div class="grid-item" data-price="1">
+              <div class="card text-center">
+                <div class="card-header">Bavarian Wheat Beer</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/bavarian.png"
+                      alt="Image"
+                      class="img-fluid tm-img product"
+                      id="product9"
+                      data-price="1"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €1
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            
+            
+            <!-- <input
+              type="submit"
+              name="submit"
+              class="submit action-button"
+              value="Submit"
+            /> -->
+          </fieldset>
+          <fieldset id="water">
+            <input
+                type="button"
+                name="previous"
+                class="previous action-button-previous"
+                value="< Recipe"
+              />
+            <div style="display: inline-block;">
+            <h2 class="fs-title">Choose Essence</h2>
+            <h3 class="fs-subtitle">Type of Essence</h3>
+            </div>
+            <input
+                type="button"
+                name="next"
+                class="next action-button"
+                value="Label >"
+              />
+            <br />
+            <div class="grid-item" data-price="2.5">
+              <div class="card text-center">
+                <div class="card-header">Cinnamon</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/cinnamon.png"
+                      alt="Image"
+                      class="img-fluid tm-img product"
+                      id="product10"
+                      data-price="2.5"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €2.5 /L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item"  data-price="3.8">
+              <div class="card text-center">
+                <div class="card-header">Vanilla</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/vainilla.png"
+                      alt="Image"
+                      class="img-fluid tm-img"
+                      id="product11"
+                      data-price="3.8"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €3.8/L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="3">
+              <div class="card text-center">
+                <div class="card-header">Banana</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/banana.png"
+                      alt="Image"
+                      class="img-fluid tm-img product"
+                      id="product12"
+                      data-price="3"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €3/L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="2">
+              <div class="card text-center">
+                <div class="card-header">Strawberry</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/strawberry.png"
+                      alt="Image"
+                      class="img-fluid tm-img product"
+                      id="product13"
+                      data-price="2"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €2/L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="2">
+              <div class="card text-center">
+                <div class="card-header">Honey</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/honey.png"
+                      alt="Image"
+                      class="img-fluid tm-img product"
+                      id="product14"
+                      data-price="2"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €2/L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="3">
+              <div class="card text-center">
+                <div class="card-header">Ginger</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/ginger.png"
+                      alt="Image"
+                      class="img-fluid tm-img product"
+                      id="product15"
+                      data-price="3"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €3/L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="1">
+              <div class="card text-center">
+                <div class="card-header">Chilli</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/chilli.png"
+                      alt="Image"
+                      class="img-fluid tm-img"
+                      id="product16"
+                      data-price="1"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €1/ L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="2.5">
+              <div class="card text-center">
+                <div class="card-header">Mint</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/mint.png"
+                      alt="Image"
+                      class="img-fluid tm-img product"
+                      id="product17"
+                      data-price="2.5"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €2.5/L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="2">
+              <div class="card text-center">
+                <div class="card-header">Chocolate</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/chocolate.png"
+                      alt="Image"
+                      class="img-fluid tm-img"
+                      id="product18"
+                      data-price="2"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €2/L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="1">
+              <div class="card text-center">
+                <div class="card-header">Cherry</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/cherry.png"
+                      alt="Image"
+                      class="img-fluid tm-img"
+                      id="product19"
+                      data-price="1"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €1/ L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="3">
+              <div class="card text-center">
+                <div class="card-header">Tequila</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/tequila.png"
+                      alt="Image"
+                      class="img-fluid tm-img product"
+                      id="product20"
+                      data-price="3"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €3/L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="1">
+              <div class="card text-center">
+                <div class="card-header">Geneva</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/Geneva.png"
+                      alt="Image"
+                      class="img-fluid tm-img"
+                      id="product21"
+                      data-price="1"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €1/ L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="3">
+              <div class="card text-center">
+                <div class="card-header">Ron</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/ron.png"
+                      alt="Image"
+                      class="img-fluid tm-img product"
+                      id="product22"
+                      data-price="3"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €3/L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="1.36">
+              <div class="card text-center">
+                <div class="card-header">Orange</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/orange.png"
+                      alt="Image"
+                      class="img-fluid tm-img product"
+                      id="product23"
+                      data-price="1.36"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €1.36/L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="3.20">
+              <div class="card text-center">
+                <div class="card-header">Lemon</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/lemon.png"
+                      alt="Image"
+                      class="img-fluid tm-img product"
+                      id="product24"
+                      data-price="3.20"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €3.20/L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" data-price="3.5">
+              <div class="card text-center">
+                <div class="card-header">Jagermeister</div>
+                <div class="card-body">
+                  <div class="img-hover-zoom" draggable='true' ondragstart='onDragStart(event);'>
+                    <img
+                      src="img/jager.png"
+                      alt="Image"
+                      class="img-fluid tm-img"
+                      id="product25"
+                      data-price="3.5"
+                    />
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Price: €3.5/L
+                  <abbr title="World Health Organization">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                  </abbr>
+                </div>
+              </div>
+            </div>
+              
+          </fieldset>
+          <fieldset id="recipie">
+            <h2 class="fs-title">Choose Label</h2>
+            <h3 class="fs-subtitle">Upload your label</h3>
+            <br />
+            <label for="img">Select image:</label>
+            <input type="file" id="img" name="img" accept="image/*" />
+            <input
+              type="button"
+              name="previous"
+              class="previous action-button-previous"
+              value="< Previous"
+            />
+            <input
+              type="submit"
+              name="submit"
+              class="submit action-button"
+              value="Submit"
+            />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    
+    
+    <!-- /.MultiStep Form -->
+
+    <!-- Preloader, https://ihatetomatoes.net/create-custom-preloading-screen/ -->
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <!-- load JS files -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+
+    <!-- jQuery (https://jquery.com/download/) -->
+    <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+    <!-- Tether for Bootstrap (http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h) -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap js (v4-alpha.getbootstrap.com/) -->
+    <script src="js/hero-slider-main.js"></script>
+    <!-- Hero slider (https://codyhouse.co/gem/hero-slider/) -->
+    <!-- <script src="js/masonry.pkgd.min.js"></script>          Masonry (http://masonry.desandro.com/) -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Magnific popup (http://dimsemenov.com/plugins/magnific-popup/) -->
+    <script src="js/index.js"></script>
+    <script>
+      $(window).load(function () {
+        // // Remove preloader (https://ihatetomatoes.net/create-custom-preloading-screen/)
+        $("body").addClass("loaded");
+      });
+    </script>
+
+    <script>
+      // $('.product').on('click', function(e) {
+      //     e.preventDefault();
+      //     var
+      // });
+    </script>
+  </body>
+</html>
